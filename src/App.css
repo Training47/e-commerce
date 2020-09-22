@@ -25,7 +25,11 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #07232b;
+}
+
+.hero is-primary {
+  color: rgb(7, 36, 36);
 }
 
 @keyframes App-logo-spin {

@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-
-
-
-const ProductItem = props => {
-  const { product } = props;
+const CartItem = props => {
+  const { cartItem, cartKey } = props;
+  const { product, amount } = cartItem;
   return (
     <div className=" column is-half">
       <div className="box">
@@ -22,29 +20,17 @@ const ProductItem = props => {
               <span className="tag is-primary">${product.price}</span>
             </b>
             <div>{product.shortDesc}</div>
-            {product.stock > 0 ? (
-              <small>{product.stock + " Available"}</small>
-            ) : (
-              <small className="has-text-danger">Out Of Stock</small>
-            )}
-            <div className="is-clearfix">
-              <button
-                className="button is-small is-outlined is-primary   is-pulled-right"
-                onClick={() =>
-                  props.addToCart({
-                    id: product.name,
-                    product,
-                    amount: 1
-                  })
-                }
-              >
-                Add to Cart
-              </button>
-            </div>
+            <small>{`${amount} in cart`}</small>
+          </div>
+          <div
+            className="media-right"
+            onClick={() => props.removeFromCart(cartKey)}
+          >
+            <span className="delete is-large"></span>
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default ProductItem;
+export default CartItem;
