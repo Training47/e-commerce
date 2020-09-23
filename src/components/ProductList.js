@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import ProductItem from "./ProductItem";
 import withContext from "../withContext";
 

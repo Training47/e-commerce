@@ -118,8 +118,8 @@ export default class App extends Component {
             >
               <div className="navbar-brand">
                 <b className="navbar-item is-size-4 ">ecommerce</b>
-                <a
-                  role="button"
+                <button
+                  type="button"
                   class="navbar-burger burger"
                   aria-label="menu"
                   aria-expanded="false"
@@ -132,7 +132,7 @@ export default class App extends Component {
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>
-                </a>
+                </button>
               </div>
 
               <div className={`navbar-menu ${
@@ -160,9 +160,9 @@ export default class App extends Component {
                     Login
                   </Link>
                 ) : (
-                  <a className="navbar-item" onClick={this.logout}>
+                  <button className ="navbar-item" onClick={this.logout}>
                     Logout
-                  </a>
+                  </button>
                 )}
               </div>
             </nav>

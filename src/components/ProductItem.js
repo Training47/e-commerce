@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 
 
@@ -12,7 +12,7 @@ const ProductItem = props => {
             <figure className="image is-64x64">
               <img
                 src="https://bulma.io/images/placeholders/128x128.png"
-                alt="Image"
+                alt="clothing"
               />
             </figure>
           </div>
